@@ -32,6 +32,8 @@ namespace IFX_CSV_Data_Extractor
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTestStatistics = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelRowCount = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBoxFileName = new System.Windows.Forms.TextBox();
@@ -41,8 +43,6 @@ namespace IFX_CSV_Data_Extractor
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewStatistics = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelTestStatistics = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,19 +60,21 @@ namespace IFX_CSV_Data_Extractor
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(977, 559);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 418);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Size = new System.Drawing.Size(969, 521);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Extractor";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -83,17 +85,37 @@ namespace IFX_CSV_Data_Extractor
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelRowCount);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 41);
+            this.panel1.Location = new System.Drawing.Point(3, 49);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 374);
+            this.panel1.Size = new System.Drawing.Size(963, 468);
             this.panel1.TabIndex = 1;
+            // 
+            // labelTestStatistics
+            // 
+            this.labelTestStatistics.AutoSize = true;
+            this.labelTestStatistics.Location = new System.Drawing.Point(29, 144);
+            this.labelTestStatistics.Name = "labelTestStatistics";
+            this.labelTestStatistics.Size = new System.Drawing.Size(177, 25);
+            this.labelTestStatistics.TabIndex = 2;
+            this.labelTestStatistics.Text = "Mean, Median, Stdev";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(26, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "VTH@IG=3.000000E-005A";
             // 
             // labelRowCount
             // 
             this.labelRowCount.AutoSize = true;
-            this.labelRowCount.Location = new System.Drawing.Point(20, 20);
+            this.labelRowCount.Location = new System.Drawing.Point(22, 28);
             this.labelRowCount.Name = "labelRowCount";
-            this.labelRowCount.Size = new System.Drawing.Size(116, 18);
+            this.labelRowCount.Size = new System.Drawing.Size(101, 25);
             this.labelRowCount.TabIndex = 0;
             this.labelRowCount.Text = "Total rows: ";
             // 
@@ -102,25 +124,28 @@ namespace IFX_CSV_Data_Extractor
             this.flowLayoutPanel1.Controls.Add(this.textBoxFileName);
             this.flowLayoutPanel1.Controls.Add(this.buttonBrowseFile);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(786, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(963, 45);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // textBoxFileName
             // 
             this.textBoxFileName.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxFileName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxFileName.Location = new System.Drawing.Point(3, 3);
+            this.textBoxFileName.Location = new System.Drawing.Point(3, 4);
+            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxFileName.Name = "textBoxFileName";
-            this.textBoxFileName.Size = new System.Drawing.Size(638, 31);
+            this.textBoxFileName.Size = new System.Drawing.Size(708, 31);
             this.textBoxFileName.TabIndex = 0;
             // 
             // buttonBrowseFile
             // 
-            this.buttonBrowseFile.Location = new System.Drawing.Point(647, 3);
+            this.buttonBrowseFile.Location = new System.Drawing.Point(717, 4);
+            this.buttonBrowseFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonBrowseFile.Name = "buttonBrowseFile";
-            this.buttonBrowseFile.Size = new System.Drawing.Size(109, 35);
+            this.buttonBrowseFile.Size = new System.Drawing.Size(121, 33);
             this.buttonBrowseFile.TabIndex = 1;
             this.buttonBrowseFile.Text = "Browse";
             this.buttonBrowseFile.UseVisualStyleBackColor = true;
@@ -130,9 +155,10 @@ namespace IFX_CSV_Data_Extractor
             // 
             this.tabPage2.Controls.Add(this.dataGridViewRaw);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 418);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Size = new System.Drawing.Size(881, 593);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Rawdata";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -141,19 +167,21 @@ namespace IFX_CSV_Data_Extractor
             // 
             this.dataGridViewRaw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRaw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRaw.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewRaw.Location = new System.Drawing.Point(3, 4);
+            this.dataGridViewRaw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewRaw.Name = "dataGridViewRaw";
             this.dataGridViewRaw.RowHeadersWidth = 62;
             this.dataGridViewRaw.RowTemplate.Height = 30;
-            this.dataGridViewRaw.Size = new System.Drawing.Size(786, 412);
+            this.dataGridViewRaw.Size = new System.Drawing.Size(875, 585);
             this.dataGridViewRaw.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridViewStatistics);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(792, 418);
+            this.tabPage3.Size = new System.Drawing.Size(969, 521);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Test Statistics";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -163,41 +191,25 @@ namespace IFX_CSV_Data_Extractor
             this.dataGridViewStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStatistics.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewStatistics.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewStatistics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewStatistics.Name = "dataGridViewStatistics";
             this.dataGridViewStatistics.RowHeadersWidth = 62;
             this.dataGridViewStatistics.RowTemplate.Height = 30;
-            this.dataGridViewStatistics.Size = new System.Drawing.Size(792, 418);
+            this.dataGridViewStatistics.Size = new System.Drawing.Size(969, 521);
             this.dataGridViewStatistics.TabIndex = 0;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(23, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "VTH@IG=3.000000E-005A";
-            // 
-            // labelTestStatistics
-            // 
-            this.labelTestStatistics.AutoSize = true;
-            this.labelTestStatistics.Location = new System.Drawing.Point(26, 104);
-            this.labelTestStatistics.Name = "labelTestStatistics";
-            this.labelTestStatistics.Size = new System.Drawing.Size(179, 18);
-            this.labelTestStatistics.TabIndex = 2;
-            this.labelTestStatistics.Text = "Mean, Median, Stdev";
-            // 
             // Frm_IFX_CSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(977, 559);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Frm_IFX_CSV";
             this.Text = "Frm_IFX_CSV";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_IFX_CSV_FormClosed);

@@ -26,6 +26,9 @@ namespace IFX_CSV_Data_Extractor
 
         private void buttonBrowseFile_Click(object sender, EventArgs e)
         {
+            labelRowCount.Text = "Total rows:";
+            labelTestStatistics.Text = "";
+
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 if (File.Exists(openFileDialog1.FileName))
@@ -42,6 +45,9 @@ namespace IFX_CSV_Data_Extractor
 
                     //Bind raw data table to datagrid view
                     dataGridViewRaw.DataSource = extractor.RawDataTable;
+
+                    //compute statistics for all test and bind to datagrid
+                    dataGridViewStatistics.DataSource = extractor.ComputeTestStatistics();
                 }
             }
         }

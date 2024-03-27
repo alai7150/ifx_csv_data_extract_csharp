@@ -130,8 +130,51 @@ namespace IFX_CSV_Data_Extractor
         //compute statistics for all tests (mean, stdev, median, min, max, cpk)
         public DataTable ComputeTestStatistics()
         {
-            //Not constructed
-            return null;
+            DataTable dt = new DataTable(RawDataTable.TableName);
+            dt.Columns.Add("TEST_NUM", typeof(UInt32));
+            dt.Columns.Add("TEST_NAM", typeof(string));
+            dt.Columns.Add("LO_LIMIT", typeof(float));
+            dt.Columns.Add("HI_LIMIT", typeof(float));
+            dt.Columns.Add("UNIT", typeof(string));
+            dt.Columns.Add("Mean", typeof(float));
+            dt.Columns.Add("Min", typeof(float));
+            dt.Columns.Add("Median", typeof(float));
+            dt.Columns.Add("Max", typeof(float));
+            dt.Columns.Add("Stdev", typeof(float));
+            dt.Columns.Add("Cpk", typeof(float));
+
+            for(int i =DataColumnStartIndex; i<=DataColumnEndIndex; i++)
+            {
+                string testName = RawDataTable.Columns[i].ColumnName;
+                //compute current test's statistics
+                TestStatistic tso = GetOneTestStatistic(testName);
+
+                //update to data row
+                DataRow dr = dt.NewRow();
+                dr["TEST_NAM"] = testName;
+                dr["TEST_NUM"] = tso.TEST_NUM;
+                dr["UNIT"] = tso.UNIT;
+                if (tso.LO_LIMIT.HasValue)
+                    dr["LO_LIMIT"] = tso.LO_LIMIT.Value;
+                if (tso.HI_LIMIT.HasValue)
+                    dr["HI_LIMIT"] = tso.HI_LIMIT.Value;
+                if (tso.Mean.HasValue)
+                    dr["Mean"] = tso.Mean.Value;
+                if (tso.Min.HasValue)
+                    dr["Min"] = tso.Min.Value;
+                if (tso.Median.HasValue)
+                    dr["Median"] = tso.Median.Value;
+                if (tso.Max.HasValue)
+                    dr["Max"] = tso.Max.Value;
+                if (tso.Stdev.HasValue)
+                    dr["Stdev"] = tso.Stdev.Value;
+                if (tso.Cpk.HasValue)
+                    dr["Cpk"] = tso.Cpk.Value;
+
+                //add datarow to datatable
+                dt.Rows.Add(dr);
+            }
+            return dt;
         }
 
         public TestStatistic GetOneTestStatistic(string testName)
