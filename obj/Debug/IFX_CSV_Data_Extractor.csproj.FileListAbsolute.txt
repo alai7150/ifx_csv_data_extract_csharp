@@ -1,0 +1,10 @@
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\bin\Debug\IFX_CSV_Data_Extractor.exe.config
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\bin\Debug\IFX_CSV_Data_Extractor.exe
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\bin\Debug\IFX_CSV_Data_Extractor.pdb
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.csproj.AssemblyReference.cache
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.Properties.Resources.resources
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.csproj.GenerateResource.cache
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.csproj.CoreCompileInputs.cache
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.exe
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.pdb
+C:\Users\evan\source\repos\IFX_CSV_Data_Extractor\obj\Debug\IFX_CSV_Data_Extractor.Frm_IFX_CSV.resources
