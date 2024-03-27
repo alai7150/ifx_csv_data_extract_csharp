@@ -4,3 +4,4 @@ This is a csharp project that extract give csv data format, it is a winform appl
 3. It will display total extracted row numbers and statistics of TEST (VTH@IG=3.000000E-005A)
 4. The raw data table will be display in 2nd tab of the window.
 5. Compute statistics of all tests and displayed in 3rd tab on the window.
+6. ** Since sample data file is small, I did not use background thread to extract data and display progress, it could be improved if we have huge data. **
